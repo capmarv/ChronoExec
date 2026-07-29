@@ -114,3 +114,5 @@ async def delete_job(job_id:int, db: Session = Depends(get_db)):
     db.commit()
 
     return {"message" : "Job deleted"}
+
+#to note cancelled jobs
