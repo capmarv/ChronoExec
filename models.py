@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime
 from database import Base
 
 class Jobs(Base):
@@ -10,4 +10,5 @@ class Jobs(Base):
     job_command = Column(String)
     job_scheduled_time = Column(DateTime)
     job_status = Column(String)
-
+    executed_at = Column(DateTime, nullable=True)
+    execution_output = Column(String, nullable=True)
